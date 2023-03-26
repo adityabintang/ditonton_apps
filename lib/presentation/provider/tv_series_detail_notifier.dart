@@ -104,10 +104,10 @@ class TvSeriesDetailNotifier extends ChangeNotifier {
     final result = await removeWatchlistTvSeries.execute(tvSeries);
 
     await result.fold(
-          (failure) async {
+      (failure) async {
         _watchlistMessage = failure.message;
       },
-          (successMessage) async {
+      (successMessage) async {
         _watchlistMessage = successMessage;
       },
     );

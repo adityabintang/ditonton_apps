@@ -1,7 +1,10 @@
 import 'package:ditonton/data/models/movie_table.dart';
+import 'package:ditonton/data/models/tv_series_table.dart';
 import 'package:ditonton/domain/entities/genre.dart';
 import 'package:ditonton/domain/entities/movie.dart';
 import 'package:ditonton/domain/entities/movie_detail.dart';
+import 'package:ditonton/domain/entities/tv.dart';
+import 'package:ditonton/domain/entities/tv_series_detail.dart';
 
 final testMovie = Movie(
   adult: false,
@@ -20,6 +23,23 @@ final testMovie = Movie(
   voteCount: 13507,
 );
 
+final testTv = Tv(
+  backdropPath: '/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg',
+  genreIds: [18],
+  id: 100088,
+  originalLanguage: "en",
+  originalName: "The Last of Us",
+  overview:
+  "Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.",
+  popularity: 2372.319,
+  posterPath: '/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg',
+  name: 'Spider-Man',
+  voteAverage: 7.2,
+  voteCount: 13507,
+  originCountry: ["US"],
+  firstAirDate: "2023-01-15",
+);
+final testTvList = [testTv];
 final testMovieList = [testMovie];
 
 final testMovieDetail = MovieDetail(
@@ -35,6 +55,25 @@ final testMovieDetail = MovieDetail(
   title: 'title',
   voteAverage: 1,
   voteCount: 1,
+);
+
+final testTvSeriesDetail = TvSeriesDetail(
+  adult: false,
+  backdropPath: 'backdropPath',
+  genres: [Genre(id: 1, name: 'Action')],
+  id: 1,
+  originalName: 'originalName',
+  overview: 'overview',
+  posterPath: 'posterPath',
+  firstAirDate: 'firstAirDate',
+  name: 'name',
+  voteAverage: 1,
+  voteCount: 1,
+  homepage: 'https://google.com',
+  originalLanguage: 'en',
+  popularity: 1,
+  status: 'Status',
+  tagline: 'Tagline',
 );
 
 final testMovieCache = MovieTable(
@@ -68,9 +107,23 @@ final testWatchlistMovie = Movie.watchlist(
   overview: 'overview',
 );
 
+final testWatchlistTvSeries = Tv.watchlist(
+  id: 1,
+  name: 'name',
+  posterPath: 'posterPath',
+  overview: 'overview',
+);
+
 final testMovieTable = MovieTable(
   id: 1,
   title: 'title',
+  posterPath: 'posterPath',
+  overview: 'overview',
+);
+
+final testTvSeriesTable = TvSeriesTable(
+  id: 1,
+  name: 'name',
   posterPath: 'posterPath',
   overview: 'overview',
 );
@@ -80,4 +133,11 @@ final testMovieMap = {
   'overview': 'overview',
   'posterPath': 'posterPath',
   'title': 'title',
+};
+
+final testTvSeriesMap = {
+  'id': 1,
+  'overview': 'overview',
+  'posterPath': 'posterPath',
+  'name': 'name',
 };

@@ -82,7 +82,7 @@ class TvSeriesListNotifier extends ChangeNotifier {
     );
   }
 
-  Future<void> fetchTopRatedMovies() async {
+  Future<void> fetchTopRatedTvSeries() async {
     _topRatedTvSeriesState = RequestState.Loading;
     notifyListeners();
 

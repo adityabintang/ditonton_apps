@@ -43,11 +43,8 @@ class _TvSeriesDetailPageState extends State<TvSeriesDetailPage> {
           } else if (provider.tvState == RequestState.Loaded) {
             final tvSeries = provider.tvSeries;
             return SafeArea(
-              child: DetailContent(
-                tvSeries,
-                provider.tvSeriesRecommendations,
-                provider.isAddedToWatchlist
-              ),
+              child: DetailContent(tvSeries, provider.tvSeriesRecommendations,
+                  provider.isAddedToWatchlist),
             );
           } else {
             return Text(provider.message);
@@ -62,7 +59,9 @@ class DetailContent extends StatelessWidget {
   final TvSeriesDetail tvSeries;
   final List<Tv> recommendations;
   final bool isAddedToWatchlist;
-  const DetailContent(this.tvSeries, this.recommendations, this.isAddedToWatchlist, {Key? key})
+  const DetailContent(
+      this.tvSeries, this.recommendations, this.isAddedToWatchlist,
+      {Key? key})
       : super(key: key);
 
   @override
@@ -125,7 +124,7 @@ class DetailContent extends StatelessWidget {
                                         .watchlistMessage;
 
                                 if (message ==
-                                    TvSeriesDetailNotifier
+                                        TvSeriesDetailNotifier
                                             .watchlistAddSuccessMessage ||
                                     message ==
                                         TvSeriesDetailNotifier

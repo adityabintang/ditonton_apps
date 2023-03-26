@@ -3,8 +3,8 @@ import 'package:ditonton/data/datasources/movie_datasources/movie_local_data_sou
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../dummy_data/dummy_objects.dart';
-import '../../helpers/test_helper.mocks.dart';
+import '../../../dummy_data/dummy_objects.dart';
+import '../../../helpers/test_helper.mocks.dart';
 
 void main() {
   late MovieLocalDataSourceImpl dataSource;
