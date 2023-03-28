@@ -2,11 +2,14 @@ import 'package:core/core.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 import 'package:data_connection_checker/data_connection_checker.dart';
+import 'package:search/bloc/search_bloc.dart';
 import 'package:search/search.dart';
 
 final locator = GetIt.instance;
 
 void init() {
+  //bloc
+  locator.registerFactory(() => SearchBloc(locator()));
   // provider
   locator.registerFactory(
     () => MovieListNotifier(

@@ -1,5 +1,6 @@
 library core;
 
+export 'package:equatable/equatable.dart';
 export 'styles/colors.dart';
 export 'styles/text_styles.dart';
 export 'utils/constants.dart';

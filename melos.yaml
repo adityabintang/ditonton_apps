@@ -1,0 +1,7 @@
+name: ditonton
+
+packages:
+  - packages/core
+  - packages/about
+  - packages/search
+  - packages/
