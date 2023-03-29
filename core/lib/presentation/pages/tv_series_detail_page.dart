@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/presentation/provider/tv_series_detail_notifier.dart';
-import 'package:core/presentation/utils/general_function.dart';
+import 'package:core/utils/general_function.dart';
 import 'package:core/styles/colors.dart';
 import 'package:core/styles/text_styles.dart';
 

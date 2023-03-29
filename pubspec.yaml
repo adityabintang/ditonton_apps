@@ -35,6 +35,8 @@ dependencies:
     path: about
   search:
     path: search
+  movie:
+    path: movie
 dev_dependencies:
   flutter_test:
     sdk: flutter

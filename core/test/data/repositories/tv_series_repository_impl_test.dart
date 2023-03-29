@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:core/data/models/genre_model.dart';
+import '../../../../movie/lib/data/models/genre_model.dart';
 import 'package:core/data/models/tv_series_detail_model.dart';
 import 'package:core/data/models/tv_series_model.dart';
 import 'package:core/data/repositories/tv_series_repository_impl.dart';

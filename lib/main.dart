@@ -2,10 +2,18 @@ import 'package:core/core.dart';
 import 'package:core/utils/utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:movie/bloc/detail_movie/detail_bloc.dart';
+import 'package:movie/bloc/list_movie/popular/popular_bloc.dart';
+import 'package:movie/bloc/list_movie/top_rated/top_rated_bloc.dart';
+import 'package:movie/bloc/recommendations/recom_bloc.dart';
+import 'package:movie/bloc/watchlist/watchlist_bloc.dart';
+import 'package:movie/movie.dart';
+import 'package:movie/presentation/pages/movie_detail_page.dart';
 import 'package:provider/provider.dart';
 import 'package:ditonton/injection.dart' as di;
 import 'package:about/about.dart';
-import 'package:search/bloc/search_bloc.dart';
+import 'package:search/bloc/bloc_movie/search_bloc.dart';
+import 'package:search/bloc/bloc_tv/search_bloc.dart';
 import 'package:search/search.dart';
 
 void main() {
@@ -19,21 +27,6 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => di.locator<MovieListNotifier>(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<MovieDetailNotifier>(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<MovieSearchNotifier>(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<TopRatedMoviesNotifier>(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<PopularMoviesNotifier>(),
-        ),
-        ChangeNotifierProvider(
           create: (_) => di.locator<WatchlistMovieNotifier>(),
         ),
         ChangeNotifierProvider(
@@ -46,16 +39,26 @@ class MyApp extends StatelessWidget {
           create: (_) => di.locator<TopRatedTvSeriesNotifier>(),
         ),
         ChangeNotifierProvider(
-          create: (_) => di.locator<TvSeriesSearchNotifier>(),
-        ),
-        ChangeNotifierProvider(
           create: (_) => di.locator<TvSeriesDetailNotifier>(),
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<OnAirNotifier>(),
         ),
+        BlocProvider(create: (_) => di.locator<RecommendationBloc>()),
+        BlocProvider(create: (_) => di.locator<WatchlistBloc>()),
+        BlocProvider(create: (_) => di.locator<MovieDetailBloc>()),
+        BlocProvider(create: (_) => di.locator<TopRatedBloc>()),
+        BlocProvider(
+          create: (_) => di.locator<ListNowPlayingBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<ListPopularBloc>(),
+        ),
         BlocProvider(
           create: (_) => di.locator<SearchBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<TvSearchBloc>(),
         ),
       ],
       child: MaterialApp(

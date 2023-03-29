@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:movie/presentation/provider/watchlist_movie_notifier.dart';
 import 'package:provider/provider.dart';
 
 import '../../utils/state_enum.dart';
 import '../../utils/utils.dart';
-import '../provider/watchlist_movie_notifier.dart';
 import '../widgets/tv_series_card.dart';
 
 class WatchlistTvSeriesPage extends StatefulWidget {
