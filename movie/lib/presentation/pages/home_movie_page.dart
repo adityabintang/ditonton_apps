@@ -1,17 +1,12 @@
 import 'package:about/about_page.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:core/presentation/pages/home_tv_series_page.dart';
-import 'package:core/presentation/pages/watchlist_tv_series_page.dart';
-import 'package:core/styles/text_styles.dart';
-import 'package:core/utils/constants.dart';
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:movie/bloc/list_movie/now_playing/list_bloc.dart';
 import 'package:movie/bloc/list_movie/popular/popular_bloc.dart';
 import 'package:movie/bloc/list_movie/top_rated/top_rated_bloc.dart';
-import 'package:movie/presentation/pages/popular_movies_page.dart';
-import 'package:movie/presentation/pages/top_rated_movies_page.dart';
-import 'package:movie/presentation/pages/watchlist_movies_page.dart';
 import 'package:search/search.dart';
+import 'package:tv/presentation/pages/home_tv_series_page.dart';
+import 'package:tv/presentation/pages/watchlist_tv_series_page.dart';
 import '../../domain/entities/movie.dart';
 import 'movie_detail_page.dart';
 
@@ -52,6 +47,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               },
             ),
             ListTile(
+              key: const Key('tv_series'),
               leading: const Icon(Icons.tv),
               title: const Text('Tv Series'),
               onTap: () {

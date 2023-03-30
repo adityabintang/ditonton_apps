@@ -1,14 +1,14 @@
 import 'dart:convert';
 import 'package:core/utils/exception.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:http/http.dart' as http;
+import 'package:core/core.dart' as http;
 import 'package:mockito/mockito.dart';
 import 'package:movie/data/datasource/movie_datasource/movie_remote_data_source.dart';
 import 'package:movie/data/models/movie_detail_model.dart';
 import 'package:movie/data/models/movie_response.dart';
-
-import '../../../../../core/test/json_reader.dart';
+import 'package:core/core.dart';
 import '../../../../../core/test/helpers/test_helper.mocks.dart';
+import '../../../json_reader.dart';
 
 void main() {
   const API_KEY = 'api_key=2174d146bb9c0eab47529b2e77d6b526';

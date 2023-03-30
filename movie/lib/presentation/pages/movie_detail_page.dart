@@ -1,9 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:core/styles/colors.dart';
-import 'package:core/styles/text_styles.dart';
+import 'package:core/core.dart';
 import 'package:core/utils/general_function.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:movie/bloc/detail_movie/detail_bloc.dart';
 import 'package:movie/bloc/recommendations/recom_bloc.dart';
 import 'package:movie/bloc/watchlist/watchlist_bloc.dart';

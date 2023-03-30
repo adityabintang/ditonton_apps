@@ -1,5 +1,5 @@
 import 'package:core/core.dart';
-import 'package:core/domain/entities/tv.dart';
+import 'package:tv/domain/entities/tv.dart';
 
 abstract class TvSearchState extends Equatable {
   const TvSearchState();

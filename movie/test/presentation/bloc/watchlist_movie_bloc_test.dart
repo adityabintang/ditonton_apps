@@ -40,7 +40,7 @@ void main() {
 
   test(
     'initial state should be empty',
-        () {
+    () {
       expect(watchlistBloc.state, WatchListEmpty());
     },
   );
@@ -99,8 +99,8 @@ void main() {
   blocTest<WatchlistBloc, WatchListState>(
     'should emit [Loading, WatchlistMovieMessage] when save to watchlist is successful',
     build: () {
-      when(mockSaveWatchlist.execute(testMovieDetail)).thenAnswer((_) async =>
-      const Right(WatchlistBloc.watchlistAddSuccessMessage));
+      when(mockSaveWatchlist.execute(testMovieDetail)).thenAnswer(
+          (_) async => const Right(WatchlistBloc.watchlistAddSuccessMessage));
       when(mockGetWatchListStatus.execute(testMovie.id))
           .thenAnswer((_) async => true);
       return watchlistBloc;
@@ -108,8 +108,7 @@ void main() {
     act: (bloc) => bloc.add(SaveWatchlistMovie(testMovieDetail)),
     expect: () => <WatchListState>[
       WatchListLoading(),
-      const WatchListMessage(
-          WatchlistBloc.watchlistAddSuccessMessage),
+      const WatchListMessage(WatchlistBloc.watchlistAddSuccessMessage),
     ],
     verify: (bloc) {
       verify(mockSaveWatchlist.execute(testMovieDetail));
@@ -120,7 +119,7 @@ void main() {
     'should emit [Loading, WatchlistMovieMessage] when remove watchlist is successful',
     build: () {
       when(mockRemoveWatchlist.execute(testMovieDetail)).thenAnswer((_) async =>
-      const Right(WatchlistBloc.watchlistRemoveSuccessMessage));
+          const Right(WatchlistBloc.watchlistRemoveSuccessMessage));
       when(mockGetWatchListStatus.execute(testMovie.id))
           .thenAnswer((_) async => false);
       return watchlistBloc;
@@ -128,8 +127,7 @@ void main() {
     act: (bloc) => bloc.add(RemoveWatchlistMovie(testMovieDetail)),
     expect: () => <WatchListState>[
       WatchListLoading(),
-      const WatchListMessage(
-          WatchlistBloc.watchlistRemoveSuccessMessage),
+      const WatchListMessage(WatchlistBloc.watchlistRemoveSuccessMessage),
     ],
     verify: (bloc) {
       verify(mockRemoveWatchlist.execute(testMovieDetail));

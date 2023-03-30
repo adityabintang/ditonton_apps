@@ -15,12 +15,10 @@ void main() {
   late TopRatedBloc topRatedBloc;
   late MockGetTopRatedMovies mockGetTopRatedMovies;
 
-
   setUp(() {
     mockGetTopRatedMovies = MockGetTopRatedMovies();
     topRatedBloc = TopRatedBloc(mockGetTopRatedMovies);
   });
-
 
   final tMovie = Movie(
     adult: false,
@@ -52,9 +50,9 @@ void main() {
       },
       act: (bloc) => bloc.add(TopRatedFetch()),
       expect: () => [
-        TopRatedLoading(),
-        TopRatedLoaded(tMovieList),
-      ],
+            TopRatedLoading(),
+            TopRatedLoaded(tMovieList),
+          ],
       verify: (bloc) {
         verify(mockGetTopRatedMovies.execute());
       });
@@ -75,5 +73,4 @@ void main() {
       verify(mockGetTopRatedMovies.execute());
     },
   );
-
 }

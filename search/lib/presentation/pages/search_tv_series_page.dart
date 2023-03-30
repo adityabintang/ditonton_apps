@@ -1,5 +1,5 @@
-import 'package:core/presentation/widgets/tv_series_card.dart';
 import 'package:core/styles/text_styles.dart';
+import 'package:core/widgets/tv_series_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:search/bloc/bloc_tv/search_bloc.dart';
@@ -51,7 +51,7 @@ class SearchTvSeriesPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8),
                       itemBuilder: (context, index) {
                         final tvSeries = state.result[index];
-                        return TvSeriesCard(tvSeries);
+                        return TvSeriesCard(tvSeries, index);
                       },
                       itemCount: result.length,
                     ),

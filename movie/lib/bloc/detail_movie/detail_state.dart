@@ -1,18 +1,17 @@
-
 part of 'detail_bloc.dart';
 
-abstract class MovieDetailState extends Equatable{
+abstract class MovieDetailState extends Equatable {
   const MovieDetailState();
 
   @override
   List<Object> get props => [];
 }
 
-class MovieDetailLoading extends MovieDetailState{}
+class MovieDetailLoading extends MovieDetailState {}
 
-class MovieDetailEmpty extends MovieDetailState{}
+class MovieDetailEmpty extends MovieDetailState {}
 
-class MovieDetailError extends MovieDetailState{
+class MovieDetailError extends MovieDetailState {
   final String message;
 
   const MovieDetailError(this.message);
@@ -21,7 +20,7 @@ class MovieDetailError extends MovieDetailState{
   List<Object> get props => [message];
 }
 
-class MovieDetailLoaded extends MovieDetailState{
+class MovieDetailLoaded extends MovieDetailState {
   final MovieDetail movieDetail;
 
   const MovieDetailLoaded(this.movieDetail);

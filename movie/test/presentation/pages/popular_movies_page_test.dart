@@ -8,7 +8,6 @@ import 'package:search/search.dart';
 
 import '../../dummy_data/dummy_objects.dart';
 
-
 class MovieEventFake extends Fake implements ListPopularEvent {}
 
 class MovieStateFake extends Fake implements PopularMovieState {}
@@ -49,7 +48,7 @@ void main() {
 
   testWidgets('Page should display ListView when data is loaded',
       (WidgetTester tester) async {
-        when(() => mockNotifier.state).thenReturn(ListPopularLoaded(testMovieList));
+    when(() => mockNotifier.state).thenReturn(ListPopularLoaded(testMovieList));
 
     final listViewFinder = find.byType(ListView);
 
@@ -60,7 +59,8 @@ void main() {
 
   testWidgets('Page should display text with message when Error',
       (WidgetTester tester) async {
-        when(() => mockNotifier.state).thenReturn(const ListPopularError('Error Message'));
+    when(() => mockNotifier.state)
+        .thenReturn(const ListPopularError('Error Message'));
 
     final textFinder = find.byKey(const Key('error_message'));
 

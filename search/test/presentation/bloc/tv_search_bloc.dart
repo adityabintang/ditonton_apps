@@ -1,5 +1,4 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:core/domain/entities/tv.dart';
 import 'package:core/utils/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -9,6 +8,7 @@ import 'package:search/bloc/bloc_tv/search_bloc.dart';
 import 'package:search/bloc/bloc_tv/search_event.dart';
 import 'package:search/bloc/bloc_tv/search_state.dart';
 import 'package:search/domain/usecases/search_tv_series.dart';
+import 'package:tv/domain/entities/tv.dart';
 
 import 'tv_search_bloc.mocks.dart';
 

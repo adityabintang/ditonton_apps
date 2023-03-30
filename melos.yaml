@@ -5,6 +5,7 @@ packages:
   - about/**
   - search/**
   - movie/**
+  - tv/**
   - '*'
 
 scripts:
