@@ -1,5 +1,6 @@
 import 'package:core/core.dart';
 import 'package:core/utils/utils.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ditonton/injection.dart' as di;
@@ -8,8 +9,13 @@ import 'package:movie/movie.dart';
 import 'package:search/search.dart';
 import 'package:tv/tv.dart';
 
+import 'firebase_options.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await di.init();
   runApp(MyApp());
 }

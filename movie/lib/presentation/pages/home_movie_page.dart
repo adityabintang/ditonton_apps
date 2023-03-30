@@ -1,5 +1,6 @@
 import 'package:about/about_page.dart';
 import 'package:core/core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:movie/bloc/list_movie/now_playing/list_bloc.dart';
 import 'package:movie/bloc/list_movie/popular/popular_bloc.dart';
