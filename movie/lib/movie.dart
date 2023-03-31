@@ -22,6 +22,7 @@ export 'package:movie/bloc/list_movie/top_rated/top_rated_bloc.dart';
 export 'package:movie/bloc/recommendations/recom_bloc.dart';
 export 'package:movie/bloc/watchlist/watchlist_bloc.dart';
 
+export 'package:movie/domain/entities/movie.dart';
 export 'package:movie/presentation/pages/movie_detail_page.dart';
 export 'package:search/bloc/bloc_movie/search_bloc.dart';
 export 'package:search/bloc/bloc_tv/search_bloc.dart';

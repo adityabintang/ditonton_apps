@@ -9,6 +9,7 @@ import 'package:movie/movie.dart';
 
 import 'now_playing_bloc_test.mocks.dart';
 
+
 @GenerateMocks([GetNowPlayingMovies])
 void main() {
   late ListNowPlayingBloc listNowPlayingBloc;
