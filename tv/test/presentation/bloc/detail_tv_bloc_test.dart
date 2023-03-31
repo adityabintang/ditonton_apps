@@ -1,4 +1,3 @@
-
 import 'package:bloc_test/bloc_test.dart';
 import 'package:core/utils/failure.dart';
 import 'package:dartz/dartz.dart';
@@ -23,7 +22,7 @@ void main() {
 
   test(
     'initial state should be empty',
-        () {
+    () {
       expect(detailTvBloc.state, DetailTvEmpty());
     },
   );
