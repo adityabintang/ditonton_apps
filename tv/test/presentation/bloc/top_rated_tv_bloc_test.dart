@@ -8,7 +8,8 @@ import 'package:tv/domain/entities/tv.dart';
 import 'package:tv/domain/usecases/get_top_rated_tv_series.dart';
 import 'package:tv/presentation/bloc/list_tv/top_rated/top_rated_bloc.dart';
 
-import 'top_rated_bloc_test.mocks.dart';
+import 'top_rated_tv_bloc_test.mocks.dart';
+
 
 @GenerateMocks([GetTopRatedTvSeries])
 void main() {
@@ -51,9 +52,9 @@ void main() {
       },
       act: (bloc) => bloc.add(TopRatedFetch()),
       expect: () => [
-            TopRatedLoading(),
-            TopRatedLoaded(tTv),
-          ],
+        TopRatedLoading(),
+        TopRatedLoaded(tTv),
+      ],
       verify: (bloc) {
         verify(mockGetTopRatedTvSeries.execute());
       });
