@@ -23,7 +23,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => di.locator<WatchListTvBloc>()),
         BlocProvider(create: (_) => di.locator<RecommendationTvBloc>()),

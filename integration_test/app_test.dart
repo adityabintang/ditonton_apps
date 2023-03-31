@@ -32,7 +32,7 @@ void main() {
         await widgetTest.tap(find.byIcon(Icons.search));
         await widgetTest.pumpAndSettle();
         expect(find.byType(TextField), findsOneWidget);
-        await widgetTest.enterText(find.byType(TextField), 'attack on titan');
+        await widgetTest.enterText(find.byType(TextField), 'the last of us');
         await widgetTest.testTextInput.receiveAction(TextInputAction.done);
         await widgetTest.pumpAndSettle();
 
