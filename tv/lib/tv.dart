@@ -26,3 +26,5 @@ export 'package:tv/presentation/pages/watchlist_tv_series_page.dart';
 export 'package:tv/presentation/bloc/detail_tv/detail_tv_bloc.dart';
 export 'package:tv/presentation/bloc/recommendations/recommen_tv_bloc.dart';
 export 'package:tv/presentation/bloc/watchlist_tv/watchlist_tv_bloc.dart';
+
+export 'package:tv/domain/entities/tv.dart';
