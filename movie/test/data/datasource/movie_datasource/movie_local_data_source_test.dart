@@ -2,8 +2,8 @@ import 'package:core/utils/exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie/data/datasource/movie_datasource/movie_local_data_source.dart';
-import '../../../../../core/test/helpers/test_helper.mocks.dart';
 import '../../../dummy_data/dummy_objects.dart';
+import '../../../helpers/test_helpers.mocks.dart';
 
 void main() {
   late MovieLocalDataSourceImpl dataSource;

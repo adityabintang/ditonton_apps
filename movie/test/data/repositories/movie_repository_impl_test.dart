@@ -10,8 +10,8 @@ import 'package:movie/data/models/movie_detail_model.dart';
 import 'package:movie/data/models/movie_model.dart';
 import 'package:movie/data/repositories/movie_repository_impl.dart';
 import 'package:movie/domain/entities/movie.dart';
-import '../../../../core/test/helpers/test_helper.mocks.dart';
 import '../../dummy_data/dummy_objects.dart';
+import '../../helpers/test_helpers.mocks.dart';
 
 void main() {
   late MovieRepositoryImpl repository;

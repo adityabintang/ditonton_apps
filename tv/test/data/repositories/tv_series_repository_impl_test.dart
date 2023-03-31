@@ -10,8 +10,8 @@ import 'package:tv/data/models/tv_series_detail_model.dart';
 import 'package:tv/data/models/tv_series_model.dart';
 import 'package:tv/data/repositories/tv_series_repository_impl.dart';
 import 'package:tv/domain/entities/tv.dart';
-import '../../../../core/test/helpers/test_helper.mocks.dart';
 import '../../dummy_data/dummy_objects.dart';
+import '../../helpers/test_helpers.mocks.dart';
 
 void main() {
   late TvSeriesRepositoryImpl repository;

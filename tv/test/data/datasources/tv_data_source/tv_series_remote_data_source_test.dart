@@ -7,10 +7,10 @@ import 'package:tv/data/datasources/tv_data_sources/tv_series_remote_data_source
 import 'package:tv/data/models/tv_series_detail_model.dart';
 import 'package:tv/data/models/tv_series_response.dart';
 
-import '../../../../../core/test/helpers/test_helper.mocks.dart';
 
 import 'package:core/core.dart' as http;
 
+import '../../../helpers/test_helpers.mocks.dart';
 import '../../../json_reader.dart';
 
 void main() {

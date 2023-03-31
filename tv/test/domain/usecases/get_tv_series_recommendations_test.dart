@@ -4,7 +4,8 @@ import 'package:mockito/mockito.dart';
 import 'package:tv/domain/entities/tv.dart';
 import 'package:tv/domain/usecases/get_tv_series_recommendations.dart';
 
-import '../../../../core/test/helpers/test_helper.mocks.dart';
+import '../../helpers/test_helpers.mocks.dart';
+
 
 void main() {
   late GetTvSeriesRecommendations usecase;

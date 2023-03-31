@@ -4,7 +4,8 @@ import 'package:mockito/mockito.dart';
 import 'package:movie/domain/entities/movie.dart';
 import 'package:search/search.dart';
 
-import '../../../core/test/helpers/test_helper.mocks.dart';
+import '../helpers/test_helper_movie.mocks.dart';
+
 
 void main() {
   late SearchMovies usecase;

@@ -4,7 +4,8 @@ import 'package:mockito/mockito.dart';
 import 'package:tv/domain/entities/tv.dart';
 import 'package:tv/domain/usecases/get_on_air_tv_series.dart';
 
-import '../../../../core/test/helpers/test_helper.mocks.dart';
+import '../../helpers/test_helpers.mocks.dart';
+
 
 void main() {
   late GetOnAirTvSeries usecase;

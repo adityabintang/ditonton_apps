@@ -4,7 +4,8 @@ import 'package:mockito/mockito.dart';
 import 'package:search/domain/usecases/search_tv_series.dart';
 import 'package:tv/domain/entities/tv.dart';
 
-import '../../../core/test/helpers/test_helper.mocks.dart';
+import '../helpers/test_helper_tv.mocks.dart';
+
 
 void main() {
   late SearchTvSeries usecase;
