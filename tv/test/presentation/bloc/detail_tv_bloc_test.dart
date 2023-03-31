@@ -2,21 +2,19 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:core/utils/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:tv/domain/usecases/get_tv_series_detail.dart';
 import 'package:tv/presentation/bloc/detail_tv/detail_tv_bloc.dart';
 
 import '../../dummy_data/dummy_objects.dart';
-import 'detail_tv_bloc_test.mocks.dart';
 
-@GenerateMocks([GetTvSeriesDetail])
+class MockTvSeriesDetail extends Fake implements GetTvSeriesDetail{}
 void main() {
   late DetailTvBloc detailTvBloc;
-  late MockGetTvSeriesDetail mockGetTvSeriesDetail;
+  late MockTvSeriesDetail mockGetTvSeriesDetail;
 
   setUp(() {
-    mockGetTvSeriesDetail = MockGetTvSeriesDetail();
+    mockGetTvSeriesDetail = MockTvSeriesDetail();
     detailTvBloc = DetailTvBloc(mockGetTvSeriesDetail);
   });
 
