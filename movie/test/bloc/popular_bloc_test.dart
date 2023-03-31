@@ -10,6 +10,7 @@ import 'package:movie/domain/usecase/get_popular_movies.dart';
 
 import 'popular_bloc_test.mocks.dart';
 
+
 @GenerateMocks([GetPopularMovies])
 void main() {
   late ListPopularBloc listPopularBloc;
