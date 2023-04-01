@@ -10,10 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  about:
-    path: ../about
-  search:
-    path: ../search
   movie:
     path: ../movie
   tv:

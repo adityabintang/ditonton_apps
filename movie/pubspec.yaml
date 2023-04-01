@@ -18,6 +18,7 @@ dependencies:
     path: ../search
   tv:
     path: ../tv
+  firebase_core: ^2.9.0
   firebase_crashlytics: ^3.1.0
   mocktail: ^0.3.0
   dartz: ^0.10.1
