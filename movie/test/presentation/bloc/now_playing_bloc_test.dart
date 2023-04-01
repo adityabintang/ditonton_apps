@@ -4,8 +4,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:movie/bloc/list_movie/now_playing/list_bloc.dart';
 import 'package:movie/domain/entities/movie.dart';
-import 'package:movie/movie.dart';
+import 'package:movie/domain/usecase/get_now_playing_movies.dart';
 
 import 'now_playing_bloc_test.mocks.dart';
 

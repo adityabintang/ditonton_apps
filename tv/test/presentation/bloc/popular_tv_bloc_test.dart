@@ -11,6 +11,7 @@ import 'package:tv/presentation/bloc/list_tv/popular/popular_tv_bloc.dart';
 
 import 'popular_tv_bloc_test.mocks.dart';
 
+
 @GenerateMocks([GetPopularTvSeries])
 void main() {
   late PopularTvBloc popularTvBloc;

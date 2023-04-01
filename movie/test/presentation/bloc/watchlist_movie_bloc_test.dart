@@ -4,9 +4,14 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:movie/bloc/watchlist/watchlist_bloc.dart';
+import 'package:movie/domain/usecase/get_watchlist_movies.dart';
+import 'package:movie/domain/usecase/get_watchlist_status.dart';
+import 'package:movie/domain/usecase/remove_watchlist.dart';
+import 'package:movie/domain/usecase/save_watchlist.dart';
 import '../../dummy_data/dummy_objects.dart';
 import 'watchlist_movie_bloc_test.mocks.dart';
-import 'package:movie/movie.dart';
+
 @GenerateMocks([
   GetWatchListStatus,
   GetWatchlistMovies,

@@ -4,7 +4,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tv/tv.dart';
+import 'package:tv/domain/entities/tv.dart';
+import 'package:tv/domain/usecases/get_top_rated_tv_series.dart';
+import 'package:tv/presentation/bloc/list_tv/top_rated/top_rated_bloc.dart';
+
 import 'top_rated_tv_bloc_test.mocks.dart';
 
 
