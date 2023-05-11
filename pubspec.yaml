@@ -41,10 +41,29 @@ dependencies:
     path: tv
   firebase_core: ^2.9.0
   firebase_crashlytics: ^3.1.0
+  mocktail: ^0.3.0
+  dartz: ^0.10.1
+  sqflite: ^2.2.6
+  provider: ^6.0.5
+  rxdart: ^0.27.7
+  flutter_bloc: ^8.1.2
+  http: ^0.13.5
+  equatable: ^2.0.5
+  google_fonts: ^4.0.3
+  cached_network_image: ^3.2.3
+  flutter_rating_bar: ^4.0.1
+  encrypt: ^5.0.1
+  data_connection_checker:
+    git:
+      url: https://github.com/chornthorn/data_connection_checker.git
+      ref: master
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  bloc_test: ^9.1.1
   build_runner: ^2.3.3
+  flutter_lints: ^2.0.0
+  mockito: ^5.4.0
   integration_test:
     sdk: flutter
   flutter_driver:
