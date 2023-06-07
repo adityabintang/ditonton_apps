@@ -9,7 +9,7 @@ void main() {
 
     testWidgets('Tv Test', (widgetTest) async {
       await binding.traceAction(() async {
-        int tvIndex = 1;
+        int tvIndex = 0;
         final tvSeriesMenu = find.byKey(Key('tv_series'));
         final scrollFinder = find.byType(Scrollable);
         final tvFinder = find.byKey(Key('tv_$tvIndex'));
